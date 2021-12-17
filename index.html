@@ -1,20 +1,179 @@
+<h1>A Tale of Three Cities: Digital Redlining as it Pertains to Access and Quality</h1>
+
+<body>
+	The research regarding equality of internet access has been split into two separate, but related, concepts: the American digital divide, and digital redlining. 
+ The American digital divide primarily pertains to the inequalities present between groups of people in terms of access to the internet, and knowledge and skill needed to interact with the internet (1). 
+ Although research shows that the digital divide has reduced considerably as more Americans develop digital literacy skills, there are still considerable gaps when grouping based on demographic characteristics (2).
+
+	Digital redlining, on the other hand, “...[I]s the creation and maintenance of technology practices that further entrench discriminatory practices against already marginalized groups” (3). 
+ The nuance is quite specific- this isn’t simply about the difference between accessing and knowing how to access the internet, but an exploration of the systemic inequalities that are baked into internet access that, then, result in dissimilar levels of access based on race. 
+ Digital redlining is the maintenance and expansion of the American digital divide, as well as the admission that the internet is systemic in its inequality of access in America (4). 
+
+	This practice is predominately apparent within the context of the inner city neighborhood although the way it actualizes differs from city to city. 
+ It could either be through ISPs not offering high speed internet packages to areas with high poverty rates like in Cleveland (5) and Dallas (6). 
+ Or it could be by the uneven level of distribution where ISPs are disproportionately focusing on providing services in high income, predominately white, neighborhoods. 
+ This latter form of digital redlining has been found in Baltimore (7), Cleveland (8), Detroit (9), Los Angeles (10), Fresno, Oakland (11), and Dallas to name a few. 
+
+Although the geographic impacts of “classic redlining” (withhold mortgage credit) has been explored through a variety of lens (12), this research question has not been applied to digital redlining. 
+ That is to say, how did the Home Owners’ Loan Corporation (HOLC) neighborhood rating map impact both the accessibility of and the quality of internet service? 
+
+In order to explore this question we will be comparing digital redlining across three different cities: Baltimore, Detroit, and Fresno. 
+
+ There is a fantastic project called <a href = https://dsl.richmond.edu/socialvulnerability/>Not Even Past: Social Vulnerability and the Legacy of Redlining </a> where researchers from the University of Richmond, mapped out the redlining maps made by the HOLC during the 1930s, onto the present day census tracts. 
+This particular dataset also gives us a percentage as to how much of a present day census tract falls under the HOLC neighborhood map as well. 
+The table below indicates how much, on average, an HOLC neighbor makes up a modern day census track in our three cities.  
+
+
+
+ <table>
+  <tr>
+    <th>HOLC Score</th>
+    <th>Baltimore</th>
+    <th>Detroit</th>
+    <th>Fresno</th>
+  </tr>
+  <tr>
+    <td><center>A</center></td>
+    <td>0.262763</td>
+    <td>0.246909</td>
+    <td>0.088722</td>
+  </tr>
+  <tr>
+    <td><center>B</center></td>
+    <td>0.328538</td>
+    <td>0.276498</td>
+    <td>0.134941</td>
+  </tr>
+  <tr>
+    <td><center>C</center></td>
+    <td>0.307629</td>
+    <td>0.286751</td>
+    <td>0.196170</td>
+  </tr>
+  <tr>
+    <td><center>D</center></td>
+    <td>0.446228</td>
+    <td>0.277596</td>
+    <td>0.158156</td>
+  </tr>
+</table> 
+
+In general, about ~20% of a census tract’s residents live in a HOLC rated neighborhood. 
+Our first exploration for this particular question, is going to be about comparing the populations that do not have internet access by racial and/or ethnic groups and the HOLC score. 
+
+<img src="cities_samescale.png" alt="same">
+
+When we graph this value on the same scale, there are some immediate, and obvious takeaways. 
+Although the three cities are of roughly the same size (500000 – 600000 people), Baltimore and Detroit have far more people living in HOLC rated neighborhoods. 
+Fresno, in comparison and on average, only has 20% of their current residents living in HOLC rated neighborhood. 
+This largely explains why Detroit appears to have a much LARGER of digital redlining in HOLC neighborhoods when compared to Baltimore or even Fresno. 
+But this is not the case as, if we allow for different scales, we can see that this problem is present in all 3 cities. 
+
+<img src="cities_diffscale.png" alt="diff">
+
+In Fresno, the issue of digital redlining by way of internet accessibilities for HOLC neighborhood is predominately a Hispanic/Latinx problem. 
+Of the Hispanic/Latinx people who live in a HOLC neighborhood, they largely live in neighborhoods that were labelled as “Declining” (grade C) or redlined (grade D).  
+In Detroit this is a white and Black problem. 
+As we can see in the graph with the same scale, Detroit appears to have the largest population of residents living in HOLC neighborhoods who don’t have internet access. 
+Of the five racial and/or ethnic groups, the Black population appears to be the most affected with the white population trailing second. 
+Once again the neighborhood that appears to be the most impacted are the “Declining” ones. 
+
+In Baltimore, the HOLC score does not matter as residents living in “Still Desirable” (grade B) neighborhoods are also impacted by lack of internet accessibility. 
+What these graphs show us is that “classic” redlining does appear to impact digital redlining as well—there is a connection between those who are Black or Hispanic/Latinx and who live in “Declining” or previously redlined neighborhoods; and those that don’t have any internet access. 
+
+Digital redlining is not only about internet accessibilities but also about the quality of the internet that is being offered.
+
+As we can see in this graph below, there is a negative average trend of Median Download speeds by HOLC scores. 
+Of those living in HOLC neighborhoods, those in Grade D neighborhoods have the worst median download speed. 
+
+<img src="median_download.png" alt="median">
+
+Taken all together we have three different stories of digital redlining and it’s manifestations. 
+In Baltimore where Black residents seem to be disproportionately affected by internet accessibilities regardless of where they live. 
+In Detroit where not only is the median speed the lowest of the three cities, but also, once again, has the largest number of Black residents without internet access. 
+And lastly in Fresno where the Hispanic/Latinx population is the most gravely affect and have the most dramatic difference of median speeds. 
+
+If you want to explore these maps in more detail, I’ve created a digital redlining map below which outputs the HOLC grading on top of modern day census tracts. 
+A codebook for the variables included is provided in the below table. 
+
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Definition</th>
+  </tr>
+  <tr>
+    <td><center>FIRST_holc</center></td>
+    <td>The HOLC score given to the area.</td>
+  </tr>
+    <tr>
+    <td><center>white</center></td>
+    <td>The percentage of white people living in the census tract & HOLC neighborhood (xx.xx%).</td>
+  </tr>
+      <tr>
+    <td><center>black</center></td>
+    <td>The percentage of Black people living in the census tract & HOLC neighborhood (xx.xx%).</td>
+  </tr>
+      <tr>
+    <td><center>hisp</center></td>
+    <td>The percentage of Hispanic/Latinx people living in the census tract & HOLC neighborhood (xx.xx%).</td>
+  </tr>
+      <tr>
+    <td><center>amerindian</center></td>
+    <td>The percentage of American-Indian people living in the census tract & HOLC neighborhood (xx.xx%).</td>
+  </tr>
+      <tr>
+    <td><center>asian</center></td>
+    <td>The percentage of Asian people living in the census tract & HOLC neighborhood (xx.xx%).</td>
+  </tr>
+<tr>
+    <td><center>MOE</center></td>
+    <td>The margin of error for no internet accessibility (xx.xx%).</td>
+  </tr>
+    <tr>
+    <td><center>population</center></td>
+    <td>The total number of people living in the census tract.</td>
+  </tr>
+      <tr>
+    <td><center>median_download</center></td>
+    <td>Ookla Median Download Speed (Mbps).</td>
+  </tr>
+      <tr>
+    <td><center>median_upload</center></td>
+    <td>Ookla Median Upload Speed (Mbps).</td>
+  </tr>
+
+</table> 
+
+
 <table border="0">
  <tr>
-  <td><center><b style="font-size:30px"><a href = detroit.html>Detroit</a></b></center></td>
-  <td><center><b style="font-size:30px"><a href = la.html>Los Angeles</a></b></center></td>
   <td><center><b style="font-size:30px"><a href = baltimore.html>Baltimore</a></b></center></td>
+  <td><center><b style="font-size:30px"><a href = detroit.html>Detroit</a></b></center></td>
+  <td><center><b style="font-size:30px"><a href = fresno.html>Fresno</a></b></center></td>
  </tr>
  
  <tr>
-    <td><iframe src="detroit.html" height="500" width="500"></iframe></td>
-    <td><iframe src="la.html" height="500" width="500"></iframe></td>
     <td><iframe src="baltimore.html" height="500" width="500"></iframe> </td>
+    <td><iframe src="detroit.html" height="500" width="500"></iframe></td>
+    <td><iframe src="fresno.html" height="500" width="500"></iframe></td>
  </tr>
 
 </table>
 
+(1) Mossberger, K., Tolbert, C. J., & Stansbury, M. (2003). Virtual inequality: Beyond the digital divide. Georgetown University Press.
+(2) https://www.pewresearch.org/internet/2015/06/26/americans-internet-access-2000-2015/
+(3) Gilliard, C. (2019). PREPARED TESTIMONY AND STATEMENT FOR THE RECORD. 6.
+(4) https://www.commonsense.org/education/articles/digital-redlining-access-and-privacy
+(5) https://www.digitalinclusion.org/blog/2017/03/10/atts-digital-redlining-of-cleveland/
+(6) https://www.digitalinclusion.org/blog/2019/08/06/atts-digital-redlining-of-dallas-new-research-by-dr-brian-whitacre/
+(7) https://www.baltimoresun.com/opinion/editorial/bs-ed-0404-ecr-broadband-maryland-20210402-4v4ozd7q2vaohgyfj2pfba6kle-story.h
+(8) https://www.technologyreview.com/2016/12/20/155076/closing-the-digital-divide-isnt-easy-but-we-have-to-try/
+(9) https://www.urbanlab.umich.edu/project/mapping-detroits-digital-divide/
+(10) https://doi.org/10.1016/j.giq.2021.101594
+(11) https://greenlining.org/publications/online-resources/2020/on-the-wrong-side-of-the-digital-divide/
+(12)  https://dsl.richmond.edu/panorama/redlining
 
-
+</body>
 
 
 
